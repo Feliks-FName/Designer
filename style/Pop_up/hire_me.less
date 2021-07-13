@@ -1,0 +1,106 @@
+// main: ../style.less
+
+.pop-up {
+	display: none;
+	background-color: fade(#333, 25%);
+	width: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+
+
+
+
+	&__title {
+		font-weight: bold;
+		font-size: 3rem;
+	}
+
+	&__suptitle {
+		font-weight: 400;
+		font-size: 1.06rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.pop-up.active{
+	display: block;
+    animation-duration: 0.55s;  /* Время работы анимации */
+    animation-fill-mode: both;  /* Поведение анимации */
+    animation-name: fadeInDown; /* Имя анимации */
+}
+
+@keyframes fadeInDown { /* Сама анимация */
+    0% {                /* Старт анимации */
+        opacity: 0;
+        transform: translate3d(0px, -100%, 0px);
+    }
+    100% {              /* в финале анимации - финал это заданная 0.55s */
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.pop-up__form {
+	padding: 28px 32px;
+	background-color: #fff;
+	max-height: 676px;
+}
+
+.pop-up__contacts {
+	margin-bottom: 3rem;
+}
+
+.pop-up__phone, .pop-up__email {
+	display: flex;
+	align-items: center;
+
+	& a {
+		text-decoration: none;
+		color:@black;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	& img {
+		padding-right: 10px;
+	}
+}
+
+.pop-up__phone {
+	margin-bottom: 10px;
+}
+
+.pop-up__inner {
+	display: flex;
+	max-width: 900px;
+	min-height: 676px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pop-up__form {
+	width: 430px;
+	min-height: 676px;
+}
+
+.pop-up__photo {
+	width: 470px;
+	position: relative;
+
+	& img {
+		display: block;
+	}
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+}

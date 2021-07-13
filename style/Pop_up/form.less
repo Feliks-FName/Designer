@@ -1,0 +1,48 @@
+// main: ../style.less
+
+.name-email, .request {
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-align: left;
+	margin-bottom: 8px;
+}
+
+.email-input, .textarea {
+	background-color: 0;
+	border: 1px solid fade(#707070, 30%);
+	padding: 20px 28px;
+	border-radius: 27px;
+	width: 100%;
+	margin-bottom: 27px;
+	font-family: inherit;
+	max-width: 360px;
+	resize: none;
+
+	&::placeholder{
+		font-family: inherit;
+		font-weight: 300;
+	}
+
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.textarea {
+	height: 202px;
+}
+
+.button__position {
+	position: relative;
+}
+
+.button.left.pop--up {
+	position: absolute;
+	right: 5px;
+	z-index: 10;
+
+	padding: 15px 58px;
+}
+
+

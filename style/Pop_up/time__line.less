@@ -1,0 +1,180 @@
+// main: ../style.less
+
+.time__line {
+	display: flex;
+	margin: 4.2rem auto;
+	width: 100%;
+	max-width: 768px;
+}
+
+.time__line-col {
+	width: 50%;
+}
+
+.left {
+	text-align: right;
+	padding-right: 3.16rem;
+	border-right: 1px solid @text-color;
+}
+
+.right {
+	text-align: left;
+	padding-left: 3.16rem;
+}
+
+.time__line-header {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: @black;
+
+	margin-bottom: 2.53rem;
+}
+
+.time-interval {
+	text-decoration: underline;
+	font-weight: 400;
+	font-size: 0.93rem;
+	margin-top: 2.4rem;
+	margin-bottom: 12px;
+}
+
+.time__line-content {
+	margin-bottom: 12px;
+}
+
+.time__line-title {
+	font-weight: bold;
+	font-size: 1.06rem;	
+	color: @black;
+
+	margin-bottom: 3px;
+}
+
+.time__line-post {
+	font-style: italic;
+	font-size: 0.93rem;
+	color: @text-color;
+
+	margin-bottom: 12px;
+
+	&.right-post {
+		font-style: normal;
+		font-weight: 400;
+	}
+}
+
+.time__line-text {
+	font-weight: 300;
+	font-size: 0.8rem;
+	line-height: 1.5;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.skills {
+	margin-top: 2.13rem;
+}
+
+.skills__tools-item {
+	display: flex;
+	align-items: center;
+}
+
+.skills__tools-left {
+	min-width: 95px;
+	font-weight: 300;
+	font-size: 0.93rem;
+	color: @black;
+	line-height: 1.6;
+
+}
+
+.skills__tools-right {
+	padding-left: 20px;
+}
+
+.skills__tools-line {
+	width: 139px;
+	height: 6px;
+
+	background-color: #EFEFEF;
+}
+
+.skills__tools-progress {
+	height: 100%;
+	background-color: @text-color;
+
+	transition: width .2s linear;
+}
+
+
+.awards {
+	margin-top: 2.13rem;
+}
+
+.awards__item {
+	display: flex;
+	margin-top: 2.1rem;
+}
+
+.time-interval-right {
+	text-decoration: underline;
+	font-weight: 400;
+	font-size: 0.93rem;
+	padding-right: 20px;
+}
+
+
+.button__center {
+	text-align: center;
+}
+
+
+
+/* .skills__tools {
+	margin-bottom: 2.13rem;
+	font-weight: 300;
+	font-size: 0.93rem;
+	color: @black;
+	line-height: 1.6;
+
+	width: 95px;
+
+	position: relative;
+}
+
+.design::after,.illustrator::after,.photoshop::after,.sketch::after{
+	content: "";
+	position: absolute;
+	left: 100%;
+	width: 139px;
+	height: 6px;
+	
+	
+
+	margin-left: 19px;
+}
+
+.design::after {
+	background: linear-gradient(to right, @text-color 80%, #EFEFEF 20%);
+	top: 10px;
+}
+
+.illustrator::after {
+	background: linear-gradient(to right, @text-color 90%, #EFEFEF 10%);
+	top: 32px;
+	
+}
+
+.photoshop::after {
+	background: linear-gradient(to right, @text-color 80%, #EFEFEF 20%);
+	top: 53px;
+}
+
+.sketch::after {
+	background: linear-gradient(to right, @text-color 70%, #EFEFEF 30%);
+	top: 75px;
+} */

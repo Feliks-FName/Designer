@@ -1,0 +1,84 @@
+// main: ../style.less
+
+.footer {
+	background-color: @black;
+	padding: 1.35rem 0;
+}
+
+.footer__inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__item {
+	display: flex;
+	align-items: center;
+}
+
+
+.copyright {
+	position: relative;
+	padding-right: 12px;
+
+	border-right: 1px solid fade(#8D8D8E, 35%);
+
+	& p {
+		color: #8D8D8E;
+		font-size: 0.9333rem;
+		vertical-align: top;
+	}
+}
+
+.footer__social {
+	padding-left: 12px;
+
+	.footer__link {
+		padding-right: 1.2rem;
+		
+		& img {
+			transition: transform .2s linear;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+
+		
+	}
+}
+
+
+.footer__link-nav {
+	color: #8D8D8E;
+	font-size: 0.9333rem;
+	text-transform: capitalize;
+	margin-left: 15px;
+
+	text-decoration: none;
+
+	transition: color .2s linear;
+
+	&:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+}
+
+.nav__link.btn.footer {
+	font-size: .9333rem;
+	font-weight: 400;
+	color: #8D8D8E;
+	border: 1px solid #8D8D8E;
+	background: none;
+	margin-left: 15px;
+
+	transition: background .2s linear, color .2s linear;
+ ;
+
+	&:hover {
+		background: #fff;
+		color: #000;
+	}
+}

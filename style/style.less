@@ -1,0 +1,106 @@
+
+// compress: true
+
+@import "vars";
+
+html {
+	font-size: 15px;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	font-size: 1rem;
+	color: @black;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+
+	/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 6px; /* ширина для вертикального скролла */
+    height: auto; /* высота для горизонтального скролла */
+    background-color: #fff;
+	cursor: pointer;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: fade(@black, 15%);
+    border-radius: 20px;
+	transition: background .4s linear;
+    /* box-shadow: inset 1px 1px 10px #f3faf7; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: fade(@black, 30%);
+}
+
+/* Стрелки */
+
+/* ::-webkit-scrollbar-button:vertical:start:decrement {
+    background: none;
+    background-color: none;
+} */
+
+/* ::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+} */
+}
+
+
+// blocks --------------
+@import "blocks/header";
+@import "blocks/conteiner";
+@import "blocks/user";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/social";
+@import "blocks/button";
+@import "blocks/works";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/blog";
+@import "blocks/article";
+@import "blocks/footer";
+
+/* Pop_up */
+
+@import "Pop_up/modal";
+@import "Pop_up/modal-work";
+@import "Pop_up/resume";
+@import "Pop_up/time__line";
+@import "Pop_up/hire_me";
+@import "Pop_up/form";

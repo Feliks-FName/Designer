@@ -1,0 +1,41 @@
+// main: ../style.less
+
+.button {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 1.1;
+	background: 0;
+	border: 1px solid @dark-grey;
+	border-radius: 30px;
+	font-family: inherit;
+	color: inherit;
+	cursor: pointer;
+	padding: 0;
+	font-size: 1.0667rem;
+
+	transition: background .2s linear, color .2s linear, box-shadow .2s linear;
+
+	&:hover {
+		background-color: @black;
+		color: #fff;
+		box-shadow: 2px 2px 10px fade(#000, 24%);
+	}
+
+	&.right {
+		padding: 18px 45px;
+	}
+
+	&.left {
+		padding: 18px 26px;
+	}
+
+	+ .button {
+		margin-left: 1rem;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
