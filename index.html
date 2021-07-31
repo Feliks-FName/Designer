@@ -10,6 +10,11 @@
 		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300;1,400&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="style/style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+		integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<title>Portfolio</title>
 </head>
 
@@ -36,56 +41,19 @@
 					<a class="nav__link" href="#">ABOUT ME</a>
 					<a class="nav__link" href="#">BLOG</a>
 					<a class="nav__link" href="#">CONTACT</a>
-					<a class="nav__link btn" href="#">HIRE ME</a>
+					<a class="nav__link btn" href="#" data-modal="modal_hire_me">HIRE ME</a>
 				</nav>
 
+				<div class="burger">
 
+					<img class="burger-img" src="img/burger_nav/menu.svg" alt="">
 
+				</div>
+				<!-- /.burger -->
 
 			</div> <!-- header__inner -->
 		</div> <!-- conteiner -->
 
-		<div class="pop-up" id="hireMe">
-			<div class="pop-up__inner">
-				<div class="pop-up__form">
-					<div class="pop-up__title">LET'S TALK!</div>
-					<div class="pop-up__suptitle">CALL ME OR SEND ME A REQUEST</div>
-
-					<div class="pop-up__contacts">
-						<div class="pop-up__phone">
-							<img src="style/Pop_up/img/phone.svg" alt="">
-							<a href="tel:2001003000">(200) 100 3000</a>
-						</div>
-
-						<div class="pop-up__email">
-							<img src="style/Pop_up/img/message.svg" alt="">
-							<a href="mailto:designer@ui43.com">designer@ui43.com</a>
-						</div>
-					</div><!-- pop-up__contacts -->
-
-					<form class="form" action="#">
-						<p class="name-email">Adress e-mail</p>
-						<input class="email-input" name="email" type="email" placeholder="Adress e-mail">
-
-						<p class="request">Request</p>
-						<textarea class="textarea" name="comment" id="textarea" cols="30" rows="10"
-							placeholder="Type your request..."></textarea>
-						<div class="button__position">
-							<button class="button left pop--up" href="#" type="button">SEND</button>
-						</div>
-
-
-					</form>
-
-				</div>
-
-				<div class="pop-up__photo">
-					<img src="https://place-hold.it/470x676/#717072" alt="">
-					<img class="close" src="style/Pop_up/img/close.svg" alt="">
-				</div>
-
-			</div><!-- pop-up__inner -->
-		</div><!-- pop-up -->
 
 	</header><!-- header -->
 
@@ -96,7 +64,7 @@
 			<div class="intro__inner">
 				<div class="intro__content">
 					<h1 class="intro__title"><span>Hello, I’m</span><br>Lewis Nathaniel</h1>
-					<h2 class="intro__subtitle">UI &amp UX</h2>
+					<h2 class="intro__subtitle">UI &amp UX Disigner</h2>
 
 					<div class="social">
 						<a class="social__link" href="">
@@ -119,8 +87,13 @@
 						</a>
 					</div><!-- social -->
 
-					<a class="button right" href="#">HIRE ME</a>
-					<button class="button left" href="#" type="button">SEE MY RESUME</button>
+					<div class="button__wrap">
+						<a class="button right js-button" href="#" data-modal="modal_hire_me">HIRE ME</a>
+
+						<button class="button left js-button" href="#" type="button" data-modal="modal_resume">SEE MY
+							RESUME</button>
+					</div>
+
 
 
 				</div><!-- intro__content -->
@@ -137,22 +110,22 @@
 		<div class="conteiner">
 
 			<div class="works__filters">
-				<a class="works__filters-link" href="">All</a>
-				<a class="works__filters-link" href="">App</a>
-				<a class="works__filters-link" href="">Website</a>
-				<a class="works__filters-link" href="">Interaction</a>
+				<a class="works__filters-link" href="" data-filter="all" id="link">All</a>
+				<a class="works__filters-link" href="" data-filter="app" id="link">App</a>
+				<a class="works__filters-link" href="" data-filter="website" id="link">Website</a>
+				<a class="works__filters-link" href="" data-filter="interaction" id="link">Interaction</a>
 			</div>
 
 
 			<div class="portfolio">
-				<div class="portfolio__inner">
-					<div class="portfolio__item">
+				<div class="portfolio__inner" data-cat="app">
+					<div class="portfolio__item" data-modal="modal_work_1">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: app</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -160,14 +133,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
-					<div class="portfolio__item">
+				<div class="portfolio__inner" data-cat="interaction">
+					<div class="portfolio__item" data-modal="modal_work_2">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: interaction</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -175,14 +148,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="website">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: website</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -190,14 +163,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="app">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: app</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -205,14 +178,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="website">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: website</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -220,14 +193,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="interaction">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: interaction </h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -235,14 +208,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="website">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: website</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -250,14 +223,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="app">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: app</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -265,14 +238,14 @@
 					</div><!-- portfolio__item -->
 				</div><!-- portfolio__inner -->
 
-				<div class="portfolio__inner">
+				<div class="portfolio__inner" data-cat="interaction">
 					<div class="portfolio__item">
 						<div class="portfolio__img">
-							<img class="portfolio__previe" src="https://place-hold.it/370x300/#717072" alt="">
+							<img class="portfolio__previe" src="https://place-hold.it/540x440/#717072" alt="">
 						</div>
 
 						<div class="portfolio__content">
-							<h3 class="portfolio__item-filters">CATEGORY</h3>
+							<h3 class="portfolio__item-filters">CATEGORY: interaction</h3>
 							<h3 class="portfolio__item-title">PROJECT TITLE</h3>
 							<time class="portfolio__item-data" datetime="2021-06-07 15:05">2021</time>
 						</div>
@@ -319,11 +292,48 @@
 						pulvinar. Duis viverra,
 						quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.</p>
 
-					<a class="button right" href="#">HIRE ME</a>
-					<button class="button left" href="#" type="button">SEE MY RESUME</button>
+					<a class="button right" href="#" data-modal="modal_hire_me">HIRE ME</a>
+					<button class="button left" href="#" type="button" data-modal="modal_resume">SEE MY RESUME</button>
 				</div>
 
 			</div><!-- about -->
+
+			<div class="about__mobile">
+				<div class="about__inner-photo mobile">
+					<h3 class="about__title about__title--mobile">ABOUT ME</h3>
+					<img class="about__photo about__photo--mobile" src="img/about/designer_photo.png" alt="">
+				</div>
+
+				<div class="about__inner-content">
+
+					<h3 class="about__subtitle about__subtitle--mobile ">WHO AM I?</h3>
+					<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+						pellentesque eu enim eget luctus. Sed augue felis,
+						facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat
+						est consequat eu. Quisque
+						aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+						tempus dictum, auctor ac dui.
+						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at
+						mauris porta,
+						ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus
+						porttitor finibus neque vel
+						vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere
+						purus. Suspendisse
+						placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh
+						ex vitae dui. Aenean
+						laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis
+						pulvinar. Duis viverra,
+						quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.</p>
+					<div class="w100">
+						<a class="button right" href="#" data-modal="modal_hire_me">HIRE ME</a>
+
+						<button class="button left" href="#" type="button" data-modal="modal_resume">SEE MY
+							RESUME</button>
+					</div>
+
+				</div>
+			</div>
+			<!-- /.about__mobile -->
 
 		</div><!-- conteiner -->
 	</section><!-- section -->
@@ -494,7 +504,7 @@
 					<a class="footer__link-nav" href="#">About Me</a>
 					<a class="footer__link-nav" href="#">Blog</a>
 					<a class="footer__link-nav" href="#">Contact</a>
-					<a class="nav__link btn footer" href="#">HIRE ME</a>
+					<a class="nav__link btn footer" href="#" data-modal="modal_hire_me">HIRE ME</a>
 				</nav><!-- footer__nav -->
 
 			</div><!-- footer__inner -->
@@ -503,8 +513,10 @@
 
 	</footer><!-- footer -->
 
+
+
 	<!-- modals -->
-	<div class="modal" style="display: none;">
+	<div class="modal" data-modal="modal_work_1">
 		<div class="modal__dialog">
 
 			<div class="modal-work">
@@ -512,8 +524,18 @@
 				<img class="close" src="style/Pop_up/img/close.svg" alt="">
 
 				<div class="modal-work__preview">
-					<img src="https://place-hold.it/787x774/999" alt="">
-				</div>
+
+					<div data-slider="works__slider">
+						<div>
+							<img src="https://place-hold.it/787x774/999" alt="">
+						</div>
+
+						<div>
+							<img src="https://place-hold.it/787x774/000" alt="">
+						</div>
+					</div>
+
+				</div><!-- modal-work__preview -->
 
 				<div class="modal-work__content">
 					<div class="modal-work__header">
@@ -556,11 +578,93 @@
 					</div><!-- modal-work__text -->
 
 					<div class="modal-work__footer">
-						<button type="button" class="modal-work__btn modal-work__btn--previos">
+						<button type="button" class="modal-work__btn modal-work__btn--previos js-previos">
 							<img src="style/Pop_up/img/left-arrow.svg" width="11" alt="">
 							previos
 						</button>
-						<button type="button" class="modal-work__btn modal-work__btn--next">
+						<button type="button" class="modal-work__btn modal-work__btn--next js-next">
+							next
+							<img src="style/Pop_up/img/arrow-point-to-right.svg" width="11" alt="">
+						</button>
+					</div>
+
+				</div><!-- modal-work__content -->
+
+
+
+			</div><!-- modal-work -->
+
+		</div><!-- modal__dialog -->
+	</div><!-- modal -->
+
+	<!-- modals -->
+	<div class="modal" data-modal="modal_work_2">
+		<div class="modal__dialog">
+
+			<div class="modal-work">
+
+				<img class="close" src="style/Pop_up/img/close.svg" alt="">
+
+				<div class="modal-work__preview">
+
+					<div data-slider="works__slider">
+						<div>
+							<img src="https://place-hold.it/787x774/999" alt="">
+						</div>
+
+						<div>
+							<img src="https://place-hold.it/787x774/000" alt="">
+						</div>
+					</div>
+
+				</div><!-- modal-work__preview -->
+
+				<div class="modal-work__content">
+					<div class="modal-work__header">
+
+						<div class="modal-work__title">
+							<h3>PROJECT TITLE 2</h3>
+						</div>
+
+						<div class="modal-work__subtitle">
+							<p class="vertical-line">CATEGORY</p>
+							<p>2021</p>
+						</div>
+
+					</div><!-- modal-work__header -->
+
+					<div class="modal-work__client">
+						<p class="client">Client:</p>
+						<p class="post">Creative Agency</p>
+					</div>
+
+					<div class="modal-work__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget
+							luctus. Sed augue felis,
+							facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum
+							consequat est consequat eu. Quisque
+							aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+							tempus dictum, auctor ac dui.
+							Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+							Donec at mauris porta,
+							ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus
+							porttitor finibus neque vel
+							vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique
+							posuere purus. Suspendisse
+							placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet
+							nibh ex vitae dui. Aenean
+							laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc
+							lobortis pulvinar. Duis viverra,
+							quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
+						</p>
+					</div><!-- modal-work__text -->
+
+					<div class="modal-work__footer">
+						<button type="button" class="modal-work__btn modal-work__btn--previos js-previos">
+							<img src="style/Pop_up/img/left-arrow.svg" width="11" alt="">
+							previos
+						</button>
+						<button type="button" class="modal-work__btn modal-work__btn--next js-next">
 							next
 							<img src="style/Pop_up/img/arrow-point-to-right.svg" width="11" alt="">
 						</button>
@@ -576,7 +680,8 @@
 	</div><!-- modal -->
 
 
-	<div class="modal" style="display: none;">
+
+	<div class="modal" data-modal="modal_resume">
 		<div class="modal__dialog">
 
 			<img class="close" src="style/Pop_up/img/close.svg" alt="">
@@ -745,7 +850,7 @@
 				</div><!-- time__line -->
 
 				<div class="button__center">
-					<a class="button right resume" href="#">HIRE ME</a>
+					<a class="button right resume" href="#" data-modal="modal_hire_me">HIRE ME</a>
 				</div>
 
 
@@ -754,6 +859,61 @@
 
 		</div><!-- modal__dialog -->
 	</div><!-- modal -->
+
+
+	<div class="modal" data-modal="modal_hire_me">
+		<div class="modal__dialog modal__dialog--sm">
+			<img class="close" src="style/Pop_up/img/close.svg" alt="">
+
+			<div class="pop-up__inner">
+				<div class="pop-up__form">
+					<div class="pop-up__title">LET'S TALK!</div>
+					<div class="pop-up__suptitle">CALL ME OR SEND ME A REQUEST</div>
+
+					<div class="pop-up__contacts">
+						<div class="pop-up__phone">
+							<img src="style/Pop_up/img/phone.svg" alt="">
+							<a href="tel:2001003000">(200) 100 3000</a>
+						</div>
+
+						<div class="pop-up__email">
+							<img src="style/Pop_up/img/message.svg" alt="">
+							<a href="mailto:designer@ui43.com">designer@ui43.com</a>
+						</div>
+					</div><!-- pop-up__contacts -->
+
+					<form class="form" action="#" method="POST">
+						<label class="name-email" for="input-email">Adress e-mail</label>
+						<input class="email-input" name="email" type="email" id="input-email"
+							placeholder="Adress e-mail">
+
+						<label class="request">Request</label>
+						<textarea class="textarea" name="comment" id="textarea" cols="30" rows="10"
+							placeholder="Type your request..."></textarea>
+						<div class="button__position">
+							<button class="button left pop--up" href="#" type="button">SEND</button>
+						</div>
+					</form>
+
+				</div><!-- pop-up__form -->
+
+				<div class="pop-up__photo">
+					<img src="https://place-hold.it/470x1000/#717072" alt="">
+					<!-- 	<img class="close" src="style/Pop_up/img/close.svg" alt=""> -->
+				</div>
+
+			</div><!-- pop-up__inner -->
+
+
+		</div><!-- modal__dialog -->
+	</div><!-- modal -->
+
+
+	<!-- JavaScript -->
+
+	<script src="js/slick.js"></script>
+	<script src="js/app2.js"></script>
+	<script src="js/jquery.js"></script>
 
 </body>
 

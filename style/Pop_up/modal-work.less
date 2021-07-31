@@ -2,11 +2,16 @@
 
 .modal-work {
 	display: flex;
+	flex-wrap: wrap;
 
 	.modal-work__preview {
 		width: 65%;
 		position: relative;
 		overflow: hidden;
+
+		@media @tablet {
+			width: 100%;
+		}
 
 		& img {
 			position: absolute;
@@ -16,8 +21,14 @@
 
 			display: block;
 			
-
 			transform: translate3d(-50%, -50%, 0);
+
+			@media @tablet {
+			position: relative;
+			transform: none;
+			top: 0;
+			left: 0;
+		}
 		}
 	}
 }
@@ -27,13 +38,21 @@
 	position: relative;
 
 	padding: 50px 99px 15px 26px;
+
+	@media @tablet {
+		width: 100%;
+		padding: 2rem ;
+	}
+
+	
 } 
 
 .modal-work__title {
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 2rem;
+	font-size: 1.9rem;
 	margin-bottom: 3px;
+	word-wrap: none;
 }
 
 .modal-work__subtitle {
@@ -76,6 +95,10 @@
 	max-height: 355px;
 	overflow-y: auto;
 	margin-bottom: 10.6rem;
+
+	@media @tablet {
+		margin-bottom: 4rem;
+	}
 
 	& p {
 		padding-right: 10px;

@@ -9,6 +9,10 @@
 .article__inner {
 	padding: 0 1rem;
 	width: 33.3333%;
+
+	@media @mobile-sm {
+		width: 100%;
+	}
 }
 
 .article__item {
@@ -54,6 +58,10 @@
 	margin-bottom: 8px;
 	text-transform: uppercase;
 
+	@media @tablet {
+		font-size: 1rem;
+	}
+
 	& a {
 		text-decoration: none;
 		color: inherit;
@@ -71,6 +79,10 @@
 
 	margin-bottom: 23px;
 	text-transform: uppercase;
+
+	@media @tablet {
+		font-size: 0.6rem;
+	}
 }
 
 .article__text {

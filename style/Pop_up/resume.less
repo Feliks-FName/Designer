@@ -2,6 +2,14 @@
 
 .modal__content {
 	padding: 5.26rem 14.4rem 4.46rem 14.4rem;
+
+	@media @notebook {
+		padding: 4.26rem 1rem 2.56rem 1rem;
+	}
+
+	@media @tablet {
+		
+	}
 }
 
 .modal__title {
@@ -25,5 +33,13 @@
 
 		border: none;
 		border: 1px solid @text-color;
+
+		@media @notebook {
+			margin: 0 1.5rem;
+		}
+
+		@media @tablet {
+		margin: 0 1.5rem;
+	}
 	}
 }

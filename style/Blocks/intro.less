@@ -6,15 +6,35 @@
 
 	background: url(../img/intro__photo/symbols.png) right bottom no-repeat;
 
-	padding-bottom: 120px;
-	padding-top: 100px;
+	padding-bottom: 8rem;
+	padding-top: 6.6rem;
 	border-bottom: 1px solid fade(@dark-grey, 30%);
 
 	position: relative;
+
+	@media @tablet {
+		padding-bottom: 3rem;
+		padding-top: 4rem;
+
+		background-size: 390px auto;
+	}
+
+	@media @mobile {
+		background-size: 290px auto;
+		padding-top: 1.5rem;
+	}
+
+	@media @mobile-sm {
+		background-size: auto;
+	}
 }
 
 .intro__content {
 	width: 50%;
+
+	@media @mobile-sm {
+		width: 100%;;
+	}
 }
 
 .intro__title {
@@ -22,9 +42,18 @@
 	font-size: 3rem;
 	margin-bottom: 4px;
 
+	@media @tablet {
+			font-size: 2rem;
+		}
+	
+
 	span {
 		font-weight: 200;
 		font-size: 2.13rem;
+
+		@media @tablet {
+			font-size: 1.5rem;
+		}
 	}
 }
 
@@ -40,4 +69,17 @@
 	right: 0;
 	bottom: -1px;
 	z-index: 1;
+
+	@media @tablet {
+		width: 360px;
+	}
+
+	@media @mobile {
+		width: 290px;
+	}
+
+	@media @mobile-sm {
+		display: none;
+	}
+
 }

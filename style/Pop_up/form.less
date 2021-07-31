@@ -1,6 +1,7 @@
 // main: ../style.less
 
 .name-email, .request {
+	display: inline-block;
 	font-weight: bold;
 	font-size: 0.8rem;
 	text-align: left;
@@ -15,7 +16,6 @@
 	width: 100%;
 	margin-bottom: 27px;
 	font-family: inherit;
-	max-width: 360px;
 	resize: none;
 
 	&::placeholder{
@@ -34,14 +34,10 @@
 }
 
 .button__position {
-	position: relative;
+	text-align: right;
 }
 
 .button.left.pop--up {
-	position: absolute;
-	right: 5px;
-	z-index: 10;
-
 	padding: 15px 58px;
 }
 

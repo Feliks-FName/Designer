@@ -17,6 +17,11 @@
 
 	transition: background .2s linear, color .2s linear, box-shadow .2s linear;
 
+	@media @tablet {
+		font-size: 1rem;
+	}
+
+
 	&:hover {
 		background-color: @black;
 		color: #fff;
@@ -25,14 +30,41 @@
 
 	&.right {
 		padding: 18px 45px;
+		margin-right: 1.5rem;
+
+		@media @tablet {
+			padding: 13px 33px;
+			font-size: 0.9rem;
+			text-align: center;
+		}
+
+		@media @mobile {
+			
+		}
+
+		/* @media @mobile-sm {
+			padding: 18px 36px;
+		} */
 	}
 
 	&.left {
 		padding: 18px 26px;
+
+		@media @tablet {
+			padding: 13px 33px;
+			font-size: 0.9rem;
+			text-align: center;
+		}
+
 	}
 
 	+ .button {
 		margin-left: 1rem;
+
+		@media @tablet {
+			margin-left: 0;
+			
+		}
 	}
 
 	&:focus {
