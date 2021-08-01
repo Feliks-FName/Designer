@@ -2,11 +2,32 @@
 
 .nav {
 	display       : flex;
+	flex-wrap: wrap;
 	text-transform: uppercase;
 	height        : 100%;
 
 	@media @mobile {
-		display: none;
+		text-align: center;
+
+		justify-content: center;
+
+		position: absolute;
+		top: 99%;
+		right: -100%;
+		z-index: 1000;
+
+		width: 100%;
+		height: auto;
+
+		padding-bottom: 1rem;
+
+		transition: all .3s linear;
+
+		&.show {
+			background-color: #fff;
+			right: 0;
+
+		}
 	}
 }
 
@@ -39,11 +60,17 @@
 		background-color: @black;
 
 		transition: width .2s linear;
+
+		
 	}
 
 	&:hover:not(.btn) {
 		&::before {
 			width: 100%;
+
+			@media @mobile {
+				transition: none;
+			}
 		}
 	}
 
@@ -62,6 +89,13 @@
 			color           : #fff;
 			box-shadow: 2px 2px 10px fade(#000, 24%);
 		}
+	}
+
+	@media @mobile{
+		&:not(:last-child) {
+			width: 100%;	
+		}
+		
 	}
 }
 

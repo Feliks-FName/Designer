@@ -36,7 +36,6 @@ for (let links of link) {
 			} else {
 				inner.classList.remove('hide');
 			}
-
 		}
 	});
 }
@@ -88,7 +87,6 @@ buttons.forEach(element => {
 			element.addEventListener('click', function (e) {
 				e.stopPropagation();
 			});
-
 		});
 
 		/* Крестик закрытия модального окна */
@@ -100,13 +98,7 @@ buttons.forEach(element => {
 				document.body.classList.remove('no-scroll');
 			});
 		});
-
-
-
 	});
-
-
-
 });
 
 
@@ -118,3 +110,45 @@ buttons.forEach(element => {
 		element.classList.add
 	});
 }); */
+
+/* burger-menu */
+
+const burger = document.querySelector('#burger');
+
+burger.addEventListener('click', function () {
+	console.log('sdfg');
+	const nav = document.querySelector('#nav');
+	nav.classList.toggle('show');
+});
+
+const links = document.querySelectorAll('.nav__link');
+for (let link of links) {
+	link.addEventListener('click', function () {
+		/* e.preventDefault(); */
+
+		const active = document.querySelector('.active');
+
+		this.classList.add('active');
+		active.classList.remove('active');
+	})
+}
+
+/* Меню-прилипало */
+
+let heightInner = document.querySelector('.intro').scrollHeight;
+
+let scrolls = window.scrollY;
+console.log(heightInner);
+window.addEventListener('scroll', function () {
+
+	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	console.log(scrolled);
+	let header = document.querySelector('.header');
+
+	if (scrolled >= heightInner) {
+		header.classList.add('fixed');
+	} else {
+		header.classList.remove('fixed');
+	}
+})
+
