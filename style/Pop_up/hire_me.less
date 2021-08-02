@@ -44,6 +44,10 @@
 .pop-up__form {
 	padding: 28px 32px;
 	width: 48%;
+
+	@media @mobile {
+		width: 100%;
+	}
 }
 
 .pop-up__contacts {
@@ -74,6 +78,7 @@
 
 .pop-up__inner {
 	display: flex;
+	
 }
 
 .pop-up__photo {
@@ -89,5 +94,9 @@
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	@media @mobile {
+		display: none;
 	}
 }

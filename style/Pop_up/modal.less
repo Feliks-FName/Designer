@@ -24,6 +24,10 @@
 	transition: .2s linear;
 
 	display: flex;
+
+	@media @mobile {
+		padding: 6rem 2rem 2rem 2rem;
+	}
 	
 	&.hide {
 		opacity: 1;
@@ -44,6 +48,10 @@
 	&--sm {
 		width: 100%;
 		max-width: 900px;
+
+		@media @mobile {
+		width: 100%;
+	}
 	}
 
 	.close {

@@ -4,6 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+
+	<link type="image/x-icon" rel="shortcut icon" href="img/favicon/alpha_n_box_icon_138957.png">
+
+	<link type="image/png" sizes="32x32" rel="icon" href="img/favicon/alpha_n_box_icon_138957.png">
+	<!-- <link type="image/png" sizes="96x96" rel="icon" href="…/favicon-96x96.png">
+	<link type="image/png" sizes="120x120" rel="icon" href="…/favicon-120x120.png">
+ -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -20,42 +29,45 @@
 
 <body>
 	<!-- header -->
-	<header class="header">
-		<div class="conteiner">
-			<div class="header__inner">
+	<div class="fixeds">
+		<header class="header">
+			<div class="conteiner">
+				<div class="header__inner">
 
-				<div class="user">
-					<div class="user__avatar">
-						<img src="http://place-hold.it/57x57/333" alt="" class="user__photo">
+					<div class="user">
+						<div class="user__avatar">
+							<img src="http://place-hold.it/57x57/333" alt="" class="user__photo">
+						</div>
+
+						<div class="user__content">
+							<div class="user__name">Lewis Nathaniel</div>
+							<div class="user__post">UI &amp UX Designer</div>
+						</div>
+					</div> <!-- user -->
+
+
+					<nav class="nav" id="nav">
+						<a class="nav__link" href="#work">WORK</a>
+						<a class="nav__link" href="#about">ABOUT ME</a>
+						<a class="nav__link" href="#blog">BLOG</a>
+						<a class="nav__link" href="#contact">CONTACT</a>
+						<a class="nav__link btn" href="#" data-modal="modal_hire_me">HIRE ME</a>
+					</nav>
+
+					<div class="burger" id="burger">
+
+						<img class="burger-img" src="img/burger_nav/menu.svg" alt="">
+
 					</div>
+					<!-- /.burger -->
 
-					<div class="user__content">
-						<div class="user__name">Lewis Nathaniel</div>
-						<div class="user__post">UI &amp UX Designer</div>
-					</div>
-				</div> <!-- user -->
+				</div> <!-- header__inner -->
+			</div> <!-- conteiner -->
 
 
-				<nav class="nav" id="nav">
-					<a class="nav__link" href="#">WORK</a>
-					<a class="nav__link" href="#">ABOUT ME</a>
-					<a class="nav__link" href="#">BLOG</a>
-					<a class="nav__link" href="#">CONTACT</a>
-					<a class="nav__link btn" href="#" data-modal="modal_hire_me">HIRE ME</a>
-				</nav>
+		</header><!-- header -->
+	</div>
 
-				<div class="burger" id="burger">
-
-					<img class="burger-img" src="img/burger_nav/menu.svg" alt="">
-
-				</div>
-				<!-- /.burger -->
-
-			</div> <!-- header__inner -->
-		</div> <!-- conteiner -->
-
-
-	</header><!-- header -->
 
 	<!-- intro -->
 	<section class="intro">
@@ -106,7 +118,7 @@
 	</section>
 
 	<!-- works -->
-	<section class="works">
+	<section class="works" id="work">
 		<div class="conteiner">
 
 			<div class="works__filters">
@@ -263,7 +275,7 @@
 	</section><!-- works -->
 
 	<!-- about -->
-	<section class="section">
+	<section class="section" id="about">
 		<div class="conteiner">
 
 			<div class="about">
@@ -386,7 +398,7 @@
 	</div><!-- reviews -->
 
 	<!-- blog -->
-	<section class="blog">
+	<section class="blog" id="blog">
 		<div class="conteiner">
 			<div class="blog__inner">
 				<div class="blog__title">READ ME</div>
@@ -475,7 +487,7 @@
 	</section><!-- blog -->
 
 	<!-- footer -->
-	<footer class="footer">
+	<footer class="footer" id="contact">
 		<div class="conteiner">
 
 			<div class="footer__inner">

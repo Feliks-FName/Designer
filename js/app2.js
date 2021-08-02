@@ -121,10 +121,11 @@ burger.addEventListener('click', function () {
 	nav.classList.toggle('show');
 });
 
+/* Актив нажатым ссылкам */
 const links = document.querySelectorAll('.nav__link');
 for (let link of links) {
-	link.addEventListener('click', function () {
-		/* e.preventDefault(); */
+	link.addEventListener('click', function (e) {
+		e.preventDefault();
 
 		const active = document.querySelector('.active');
 
@@ -145,7 +146,7 @@ window.addEventListener('scroll', function () {
 	console.log(scrolled);
 	let header = document.querySelector('.header');
 
-	if (scrolled >= heightInner) {
+	if (scrolled > heightInner) {
 		header.classList.add('fixed');
 	} else {
 		header.classList.remove('fixed');

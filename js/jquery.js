@@ -33,4 +33,17 @@ $(function () {
 		currentSlider.slick('slickNext');
 	});
 
+	/* Якоря */
+
+	$('a[href^="#"]').click(function () {
+		let target = $(this).attr('href');
+
+		let brg = $('nav');
+		brg.removeClass('show');
+
+		$('html, body').animate({
+			scrollTop: $(target).offset().top - 50
+		}, 500);
+	});
+
 });

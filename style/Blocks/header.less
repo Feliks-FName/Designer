@@ -1,19 +1,32 @@
 // main: ../style.less
 
 .header {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
 	padding: 1.2rem 0;
-	position: relative;
+	/* position: relative; */
+	transform: translateZ(0);
+	background-color: #fff;
+	z-index: 1000;
+	
 
 	&.fixed {
 		position: fixed;
+		padding: .3rem 0;
 		width: 100%;
+		height: auto;
 		background-color: #fff;
-		/* top: 0;
-		left: 0; */
+		transform: translateZ(0);
+		top: 0;
+		left: 0;
 		z-index: 10000;
-		box-shadow: 10px 1px 10px #333;
+		box-shadow: 0px 1px 10px #333;
 	}
 }
+
 
 .header__inner {
 	display: flex;
